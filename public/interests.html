@@ -28,7 +28,7 @@
   </header>
   <div class = "row">
   </div>
-  <table class="table tables cooltext">
+  <table id = "survivor-table" class="table tables cooltext">
   <thead>
     <tr class = "cooltext" id = "sicktext">
       <th scope="col">Title</th>
@@ -103,5 +103,11 @@
 <a class="btn btn-primary" href="#" role="button">Add Book</a>
 </form>
 </div>
+
+<!--https://github.com/tristen/tablesort-->
+<script src='js/tablesort.min.js'></script>
+<script>
+  new Tablesort(document.getElementById('survivor-table'));
+</script>
 </body>
 </html>
