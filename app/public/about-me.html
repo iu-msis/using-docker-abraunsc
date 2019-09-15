@@ -32,9 +32,9 @@
     </div>
   </header>
 
-<div id = "randomUserInfo" class="cooltext">
+<div v-if="person.results" id = "randomUserInfo" class="cooltext">
    <!-- v-bind taken from vue forum -->
-  <img v-bind:src="person.picture.large" width="300px"><br>
+  <img v-bind:src="person.picture.large" width="300px" v-if="person.picture.large"><br>
   <span style="text-transform:capitalize">{{ person.name.first }} {{ person.name.last }}</span><br>
   <span>Born: {{ person.dob.date }}</span><br>
   <span>Age: {{ person.dob.age }}</span><br>
