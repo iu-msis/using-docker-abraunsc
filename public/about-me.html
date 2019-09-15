@@ -1,9 +1,14 @@
 <!doctype html>
 <html>
 <head>
+  <meta charset="utf-8">
   <title>About Me</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="css/site.css">
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
 </head>
 <body>
 <div class = "container">
@@ -37,7 +42,19 @@
       Email: <a class = "linkies" href = mailto:abraunsc@iu.edu>abraunsc@iu.edu</a><br>
 
     </p>
-    </body>
+</div>
+
+<div id = "randomUserInfo">
+  <span>{{ person[0].name.first }} {{ person[0].name.last }}</span><br>
+  <span>Born: {{ person[0].dob.date }}</span><br>
+  <span>Age: {{ person[0].dob.age }}</span><br>
+  <span>Email: <a class = "linkies" href = mailto:abraunsc@iu.edu>{{ person[0].email }}</a></span><br>
+  <span>Origin: {{ person[0].nat }}</span>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="js/randomUser.app.js"></script>
 </div>
 </body>
 </html>
