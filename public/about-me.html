@@ -32,24 +32,13 @@
     </div>
   </header>
 
-  <div class = "row">
-    <a href="img/dan-fuego-memory.gif" > <img class = "img-thumbnail" src = "img/dan-fuego-memory.gif" alt = "pic of the greatest" height= 100%></a>
-<p><cite id = "sicktext">Credit to https://news.cornell.edu/stories/1997/09/space-shuttle-experience-topic-cornell-astronaut-alum-daniel-barry-oct-7-talk</cite></p>
-    <p class = "cooltext">Daniel "Dan Fuego" Barry<br>
-      Origin: Panama<br>
-      Born: December 30, 1953<br>
-      Age: ???<br>
-      Email: <a class = "linkies" href = mailto:abraunsc@iu.edu>abraunsc@iu.edu</a><br>
-
-    </p>
-</div>
-
-<div id = "randomUserInfo">
-  <span>{{ person[0].name.first }} {{ person[0].name.last }}</span><br>
-  <span>Born: {{ person[0].dob.date }}</span><br>
-  <span>Age: {{ person[0].dob.age }}</span><br>
-  <span>Email: <a class = "linkies" href = mailto:abraunsc@iu.edu>{{ person[0].email }}</a></span><br>
-  <span>Origin: {{ person[0].nat }}</span>
+<div id = "randomUserInfo" class="cooltext">
+  <img v-bind:src="person.picture.large" width="300px"><br>
+  <span style="text-transform:capitalize">{{ person.name.first }} {{ person.name.last }}</span><br>
+  <span>Born: {{ person.dob.date }}</span><br>
+  <span>Age: {{ person.dob.age }}</span><br>
+  <span>Email: <a class = "linkies" v-bind:href="`mailto:${person.email}`">{{ person.email }}</a></span><br>
+  <span>Origin: {{ person.nat }}</span>
 
 </div>
 
