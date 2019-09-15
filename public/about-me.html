@@ -33,10 +33,12 @@
   </header>
 
 <div id = "randomUserInfo" class="cooltext">
+   <!-- v-bind taken from vue forum -->
   <img v-bind:src="person.picture.large" width="300px"><br>
   <span style="text-transform:capitalize">{{ person.name.first }} {{ person.name.last }}</span><br>
   <span>Born: {{ person.dob.date }}</span><br>
   <span>Age: {{ person.dob.age }}</span><br>
+  <!-- href v-bind taken from vue forum -->
   <span>Email: <a class = "linkies" v-bind:href="`mailto:${person.email}`">{{ person.email }}</a></span><br>
   <span>Origin: {{ person.nat }}</span>
 

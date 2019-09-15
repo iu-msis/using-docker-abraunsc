@@ -1,8 +1,9 @@
+// based off tom's example in class
 var randomUser = new Vue({
   el: '#randomUserInfo',
   data: {
     person: {
-    
+
     }
   },
   methods: {
