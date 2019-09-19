@@ -35,14 +35,18 @@
   </header>
 
 <div v-if="person.picture" id = "randomUserInfo" class="cooltext">
-   <!-- v-bind taken from vue forum -->
-  <img v-bind:src="person.picture.large" width="300px" v-if="person.picture.large"><br>
-  <span style="text-transform:capitalize">{{ person.name.first }} {{ person.name.last }}</span><br>
-  <span>Born: {{ person.dob.date }}</span><br>
-  <span>Age: {{ person.dob.age }}</span><br>
-  <!-- href v-bind taken from vue forum -->
-  <span>Email: <a class = "linkies" v-bind:href="`mailto:${person.email}`">{{ person.email }}</a></span><br>
-  <span>Origin: {{ person.nat }}</span>
+
+  <form @submit.prevent="handleFreshUser">
+    <!-- v-bind taken from vue forum -->
+    <img v-bind:src="person.picture.large" width="300px" v-if="person.picture.large"><br>
+    <span style="text-transform:capitalize">{{ person.name.first }} </span> <span style="text-transform:capitalize">{{ person.name.last }}</span><br>
+    <span>Born: {{ person.dob.date }}</span><br>
+    <span>Age: {{ person.dob.age }}</span><br>
+    <!-- href v-bind taken from vue forum -->
+    <span>Email: <a class = "linkies" v-bind:href="`mailto:${person.email}`">{{ person.email }}</a></span><br>
+    <span>Origin: {{ person.nat }}</span><br>
+    <button type="submit" class="btn btn-primary">Create</button>
+  </form>
 
 </div>
 

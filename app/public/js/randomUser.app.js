@@ -12,6 +12,9 @@ var randomUser = new Vue({
       .then( response => response.json() )
       .then( json => {randomUser.person = json.results[0]})
       ;
+    },
+    handleFreshUser(event) {
+      this.fetchUser();
     }
   },
   //what i want to have happen once vue instance is created
